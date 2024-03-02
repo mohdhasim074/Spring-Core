@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- beans -->
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 01:) value as a element : Setter-Injection -->
+
+    <bean class="com.springcore.setterInjection.Student"
+          name="student1">
+        <property name="Studentid">
+            <value>04</value>
+        </property>
+        <property name="studentName">
+            <value>Mohammad Hasim</value>
+        </property>
+        <property name="studentAddress">
+            <value>Kanpur Nagar 209217</value>
+        </property>
+    </bean>
+
+    <!-- 02:) value as a Attribute : Setter-Injection -->
+
+    <bean class="com.springcore.setterInjection.Student"
+          name="Student2">
+        <property name="Studentid" value="82"/>
+        <property name="studentName" value="MHKhan"/>
+        <property name="studentAddress" value=" Kanpur Nagar"/>
+    </bean>
+
+    <!-- 03:) PSchema :Setter-Injection -->
+
+    <bean class="com.springcore.setterInjection.Student"
+          name="Student3" p:Studentid="234" p:studentName="Mr.X"
+          p:studentAddress="LKO"/>
+
+</beans>
